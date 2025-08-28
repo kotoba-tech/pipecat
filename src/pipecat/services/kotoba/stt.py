@@ -301,7 +301,7 @@ class KotobaASRService(STTService):
             else:
                 await self.push_frame(
                     InterimTranscriptionFrame(
-                        transcript, "", time_now_iso8601(), self._language_code
+                        self._state.transcript, "", time_now_iso8601(), self._language_code
                     )
                 )
 
